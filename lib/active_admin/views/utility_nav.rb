@@ -18,7 +18,7 @@ module ActiveAdmin
       private
 
       def build_current_user
-        span display_name(current_active_admin_user), :class => "current_user"
+        span display_name(@namespace.current_user_method), :class => "current_user"
       end
 
       def build_logout_link
